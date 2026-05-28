@@ -1,0 +1,18 @@
+{
+  "name": "Super Desafio de Cálculo",
+  "short_name": "DesafioCálculo",
+  "description": "Treine sua mente com desafios matemáticos de lógica e expressões com colchetes e chaves.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#121214",
+  "theme_color": "#8257e5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
