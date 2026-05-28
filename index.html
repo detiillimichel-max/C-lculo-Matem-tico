@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Desafio de Cálculo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8257e5">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>Desafio de Cálculo</h1>
+            <nav>
+                <a href="about.html" class="nav-link">Sobre o Jogo</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="status-panel">
+                <div class="status-item">Fase: <span id="current-phase">1</span>/9</div>
+                <div class="status-item">Pontos: <span id="current-score">0</span></div>
+            </div>
+
+            <div class="card shadow">
+                <div id="difficulty-title" class="difficulty-tag">Fácil</div>
+                <p class="instruction">Resolva a expressão abaixo:</p>
+                <div id="expression-display" class="expression">Carregando...</div>
+
+                <form id="game-form" autocomplete="off">
+                    <div class="input-group">
+                        <input type="number" id="user-answer" placeholder="Sua resposta" required>
+                    </div>
+                    <button type="submit" id="btn-submit">Verificar Resposta</button>
+                </form>
+
+                <div id="feedback-message" class="feedback hidden"></div>
+            </div>
+
+            <div class="controls">
+                <button id="btn-reset" class="btn-secondary">Reiniciar Jogo</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
