@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #121214;
+    --card-bg: #202024;
+    --text-color: #e1e1e6;
+    --text-muted: #a8a8b3;
+    --primary-color: #8257e5;
+    --primary-hover: #9466ff;
+    --success-color: #04d361;
+    --error-color: #f75a68;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #29292e;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--text-color);
+}
+
+.status-panel {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--card-bg);
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.status-item span {
+    color: var(--primary-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.shadow {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-left h2, .text-left h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.text-left p, .text-left ul {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.text-left ul {
+    padding-left: 20px;
+}
+
+.difficulty-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #29292e;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.instruction {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.expression {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    color: #fff;
+    word-break: break-all;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    background-color: #121214;
+    border: 2px solid #29292e;
+    border-radius: var(--border-radius);
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid #29292e;
+}
+
+.btn-secondary:hover {
+    background-color: #29292e;
+    color: var(--text-color);
+}
+
+.feedback {
+    padding: 12px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.feedback.success {
+    background-color: rgba(4, 211, 97, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.feedback.error {
+    background-color: rgba(247, 90, 104, 0.1);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media(max-width: 480px) {
+    .expression {
+        font-size: 1.7rem;
+    }
+}
+
